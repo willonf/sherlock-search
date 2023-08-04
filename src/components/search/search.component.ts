@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, Injector} from '@angular/core';
 
 @Component({
   selector: 'app-search',
@@ -6,5 +6,11 @@ import {Component} from '@angular/core';
   styleUrls: ['./search.component.scss']
 })
 export class SearchComponent {
+
+  public queries = [];
+
+  constructor(public injector: Injector) {
+    // this.layoutService = injector.get(LayoutService);
+  }
 
 }

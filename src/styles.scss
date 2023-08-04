@@ -1,4 +1,43 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'primeflex/primeflex.scss';
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.badge {
+  display: inline-block;
+  font-size: 85%;
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  padding: 6px 8px 6px 8px;
+  border-radius: 10rem;
+
+  &.badge-default {
+    background-color: #333333;
+    color: #ffffff;
+  }
+
+  &.badge-info {
+    background-color: #3099f1;
+    color: #ffffff;
+  }
+
+  &.badge-success {
+    background-color: #28a745;
+    color: #ffffff;
+  }
+
+  &.badge-danger {
+    background-color: #ff5151;
+    color: #ffffff;
+  }
+
+  &.badge-warning {
+    color: #212529;
+    background-color: #ffc107;
+  }
+}

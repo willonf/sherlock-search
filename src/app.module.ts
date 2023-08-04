@@ -7,6 +7,11 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {HttpClientModule} from "@angular/common/http";
 import {NoPreloading, RouterModule} from "@angular/router";
 import {SearchComponent} from './components/search/search.component'
+import {MatCardModule} from "@angular/material/card";
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatInputModule} from "@angular/material/input";
+import {MatIconModule} from "@angular/material/icon";
+import {SharedModule} from "./shared.module";
 
 @NgModule({
   declarations: [
@@ -19,6 +24,11 @@ import {SearchComponent} from './components/search/search.component'
     BrowserAnimationsModule,
     HttpClientModule,
     RouterModule.forRoot(new AppRouting().routes, {preloadingStrategy: NoPreloading}),
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatIconModule,
+    SharedModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
