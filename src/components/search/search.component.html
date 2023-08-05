@@ -1,12 +1,30 @@
-<mat-card class="m-6">
-  <div class="m-5 column-center-center">
+<div class="flex flex-column m-2">
 
-    <form>
-      <mat-form-field>
+  <mat-card class="flex flex-column m-4 justify-content-center align-items-stretch">
+
+    <form [formGroup]="formGroup" class="flex flex-row justify-content-center align-items-center m-3 gap-4">
+
+      <mat-form-field class="flex flex-grow-1">
         <mat-icon matPrefix>search</mat-icon>
-        <input matInput type="text" autoFocus>
+        <input matInput type="text" formControlName="query" autoFocus>
       </mat-form-field>
+
+      <button (click)="search()" type="button" mat-stroked-button color="primary">Pesquisar</button>
+
     </form>
 
+  </mat-card>
+
+  <mat-divider></mat-divider>
+
+  <div class="flex flex-column">
+    <mat-card *ngFor="let result of queries" class="flex flex-column mx-2 my-4 gap-2 justify-content-center align-items-stretch">
+      <div class="flex flex-column mx-4 my-2">
+        <h3>Título {{result}}</h3>
+        <p>Corpo {{result}}</p>
+      </div>
+    </mat-card>
   </div>
-</mat-card>
+
+
+</div>
