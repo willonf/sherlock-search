@@ -16,29 +16,32 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatTableModule} from "@angular/material/table";
 import {MatDividerModule} from "@angular/material/divider";
 import {ReactiveFormsModule} from "@angular/forms";
+import {ToastrModule, ToastrService} from "ngx-toastr";
+import {TOAST_OPTIONS} from "./app/app.constants";
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchComponent
   ],
-    imports: [
-        BrowserModule,
-        AppRouting,
-        BrowserAnimationsModule,
-        HttpClientModule,
-        RouterModule.forRoot(new AppRouting().routes, {preloadingStrategy: NoPreloading}),
-        MatCardModule,
-        MatFormFieldModule,
-        MatInputModule,
-        MatIconModule,
-        SharedModule.forRoot(),
-        MatButtonModule,
-        MatTableModule,
-        MatDividerModule,
-        ReactiveFormsModule,
-    ],
-  providers: [],
+  imports: [
+    BrowserModule,
+    AppRouting,
+    BrowserAnimationsModule,
+    HttpClientModule,
+    RouterModule.forRoot(new AppRouting().routes, {preloadingStrategy: NoPreloading}),
+    ToastrModule.forRoot(TOAST_OPTIONS),
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatIconModule,
+    SharedModule.forRoot(),
+    MatButtonModule,
+    MatTableModule,
+    MatDividerModule,
+    ReactiveFormsModule,
+  ],
+  providers: [ToastrService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
