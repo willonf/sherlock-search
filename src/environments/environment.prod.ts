@@ -1,6 +1,6 @@
 export const environment = {
-  production: false,
+  production: true,
   urlBase: `http://${location.hostname}:${9200}`,
-  collection: '/tests',
+  collection: '/production',
   searchRoute: '/_search'
 };
